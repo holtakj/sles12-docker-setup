@@ -2,7 +2,7 @@
 - hosts: localhost
   tasks:
 
-    # Install "nmap"
+    # Install "docker"
     - zypper:
-        name: git-core
+        name: docker
         state: present

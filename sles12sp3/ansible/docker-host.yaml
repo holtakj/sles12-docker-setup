@@ -1,0 +1,2 @@
+---
+- include: ../../common/ansible/install_docker.yaml
