@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+
+    # Install "nmap"
+    - zypper:
+        name: git-core
+       state: present
