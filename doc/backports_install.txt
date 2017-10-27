@@ -6,3 +6,5 @@ sudo zypper -n addrepo -fc http://download.opensuse.org/repositories/openSUSE:/B
 sudo zypper -n addrepo -fc http://download.opensuse.org/repositories/openSUSE:/Backports:/SLE-12-SP3/standard/openSUSE:Backports:SLE-12-SP3.repo | echo 'a'
 sudo zypper -n refresh
 
+zypper addrepo -fc http://download.opensuse.org/repositories/Virtualization:/containers/openSUSE_Leap_42.1/Virtualization:containers.repo
+

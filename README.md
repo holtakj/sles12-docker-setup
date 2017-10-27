@@ -22,5 +22,5 @@ cd sles12-docker-setup.git
 Execute this script and follow onscreen instructions:
 
 ```
-sudo sles12sp3\prepare.sh 
+sudo sles12sp3/prepare.sh 
 ```
