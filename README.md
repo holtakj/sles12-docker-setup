@@ -9,12 +9,18 @@ sudo wget -O - https://raw.githubusercontent.com/holtakj/sles12-docker-setup/mas
 
 1(b). (UPDATE FROM OLDER INSTALL - NOT NEEDED ON NEW INSTALL) Run the update script: 
 ```
-sudo sles12-docker-setup.git\update.sh 
+cd sles12-docker-setup.git
+sudo update.sh 
 ```
 
-2. In the next step we will add some backport repositories and install ansible.
+2. Change directory
+```
+cd sles12-docker-setup.git
+```
+
+3. In the next step we will add some backport repositories and install ansible.
 Execute this script and follow onscreen instructions:
 
 ```
-sudo sles12-docker-setup.git\sles12sp3\prepare.sh 
+sudo sles12sp3\prepare.sh 
 ```
