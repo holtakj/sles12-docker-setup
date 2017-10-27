@@ -5,4 +5,4 @@
     # Install "nmap"
     - zypper:
         name: git-core
-       state: present
+        state: present
