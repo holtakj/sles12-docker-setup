@@ -10,7 +10,7 @@ zypper addrepo -fc http://download.opensuse.org/repositories/openSUSE:/Backports
 zypper addrepo -fc http://download.opensuse.org/repositories/openSUSE:/Backports:/SLE-12-SP1/standard/openSUSE:Backports:SLE-12-SP1.repo
 zypper addrepo -fc http://download.opensuse.org/repositories/openSUSE:/Backports:/SLE-12-SP2/standard/openSUSE:Backports:SLE-12-SP2.repo
 zypper addrepo -fc http://download.opensuse.org/repositories/openSUSE:/Backports:/SLE-12-SP3/standard/openSUSE:Backports:SLE-12-SP3.repo
-
+zypper addrepo http://download.opensuse.org/repositories/devel:languages:python/SLE_12_SP3/devel:languages:python.repo
 
 echo "Please answer with 'a' to trust all repos..."
 sleep 3
