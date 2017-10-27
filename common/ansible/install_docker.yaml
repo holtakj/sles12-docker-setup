@@ -9,3 +9,4 @@
       zypper:
         name: docker-compose
         state: present
+    - service: name=docker enabled=yes
