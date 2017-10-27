@@ -23,8 +23,8 @@ sleep 5
 
 zypper install ansible
 
-
-
+echo  -v "Installed ";
+ansible-playbook --version
 
 
 
