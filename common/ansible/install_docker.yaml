@@ -1,8 +1,11 @@
 ---
 - hosts: localhost
   tasks:
-
-    # Install "docker"
-    - zypper:
+    - name: Install Docker CE
+      zypper:
         name: docker
+        state: present
+    - name: Install docker-compose
+      zypper:
+        name: docker-compose
         state: present
