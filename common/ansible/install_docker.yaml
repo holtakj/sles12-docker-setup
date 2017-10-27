@@ -9,4 +9,11 @@
       zypper:
         name: docker-compose
         state: present
-    - service: name=docker enabled=yes
+    - name: Start Docker on boot
+      service:
+        name: docker
+        enabled: yes
+    - name: Start Docker now if its not running
+      service:
+        name: docker
+        state: started
