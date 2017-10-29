@@ -4,7 +4,5 @@
     - name: Create user jenkins-docker
       user:
         name: jenkins-docker
-        createhome: no
-        shell: /bin/false
-        system: yes
+        system: no
         state: present
