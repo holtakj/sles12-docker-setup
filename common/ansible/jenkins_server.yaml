@@ -1,9 +1,13 @@
 ---
 - hosts: localhost
   tasks:
-    - name: Create user jenkins-docker
+    - name: Create user jenkins-docker with home dir under /home/jenkins-docker
       user:
         name: jenkins-docker
-        system: no
+        system: yes
+        createhome: yes
+        home: /home/jenkins-docker
         state: present
         uid: 60001
+    - name: Creates directory to mount jenkins data
+      file: path=/home/jenkins-docker/data state=directory

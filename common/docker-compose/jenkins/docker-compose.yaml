@@ -30,7 +30,7 @@ services:
     ports:
       - "50000:50000"
     volumes:
-      - jenkins_home:/var/jenkins_home
+      - /home/jenkins-docker/data:/var/jenkins_home
     depends_on:
       - nginx
     restart: always
