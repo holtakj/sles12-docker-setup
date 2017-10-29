@@ -27,8 +27,8 @@
         state: present
         version: 1.15.0
     - name: Install docker-py
-          pip:
-            name: docker-py
-            state: present
-            version: 1.9
+      pip:
+        name: docker-py
+        state: present
+        version: 1.9
 
