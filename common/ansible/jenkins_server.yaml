@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Create user jenkins_docker
+      user:
+        name: jenkins_docker
+        createhome: no
+        shell: /bin/false
+        system: yes
+        state: present
