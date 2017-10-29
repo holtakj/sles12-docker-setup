@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-
-. ../common/enforce_root.sh
-
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+. $DIR/../common/enforce_root.sh
+
 
 $DIR/docker-host.sh &&
 
