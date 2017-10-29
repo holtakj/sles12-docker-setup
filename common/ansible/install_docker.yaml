@@ -17,3 +17,8 @@
       service:
         name: docker
         state: started
+    - name: Install docker-compose
+      pip:
+        name: docker-compose
+        state: forcereinstall
+        version: 1.15.0
