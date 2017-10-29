@@ -11,7 +11,7 @@
         uid: 60001
     - name: Creates directory to mount jenkins data
       file:
-        path: /home/jenkins-docker/data
+        path: /home/jenkins-docker/DATA
         state: directory
         recurse: yes
         owner: jenkins-docker
