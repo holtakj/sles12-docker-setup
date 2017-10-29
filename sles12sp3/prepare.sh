@@ -10,9 +10,9 @@ zypper addrepo -fc http://download.opensuse.org/repositories/openSUSE:/Backports
 zypper addrepo -fc http://download.opensuse.org/repositories/openSUSE:/Backports:/SLE-12-SP1/standard/openSUSE:Backports:SLE-12-SP1.repo
 zypper addrepo -fc http://download.opensuse.org/repositories/openSUSE:/Backports:/SLE-12-SP2/standard/openSUSE:Backports:SLE-12-SP2.repo
 zypper addrepo -fc http://download.opensuse.org/repositories/openSUSE:/Backports:/SLE-12-SP3/standard/openSUSE:Backports:SLE-12-SP3.repo
-#zypper addrepo http://download.opensuse.org/repositories/devel:languages:python/SLE_12_SP3/devel:languages:python.repo
-zypper addrepo -fc http://download.opensuse.org/repositories/Virtualization:/containers/openSUSE_Leap_42.3/Virtualization:containers.repo
-zypper addrepo -fc http://download.opensuse.org/repositories/devel:/languages:/python/openSUSE_Leap_42.3/devel:languages:python.repo
+zypper addrepo http://download.opensuse.org/repositories/devel:languages:python/SLE_12_SP3/devel:languages:python.repo
+#zypper addrepo -fc http://download.opensuse.org/repositories/Virtualization:/containers/openSUSE_Leap_42.3/Virtualization:containers.repo
+#zypper addrepo -fc http://download.opensuse.org/repositories/devel:/languages:/python/openSUSE_Leap_42.3/devel:languages:python.repo
 
 
 echo "Please answer with 'a' to trust all repos..."
