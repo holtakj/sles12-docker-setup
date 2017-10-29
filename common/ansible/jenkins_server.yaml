@@ -5,6 +5,6 @@
       user:
         name: jenkins_docker
         createhome: no
-        shell: /bin/false
+        shell: /bin/nologin
         system: yes
         state: present
