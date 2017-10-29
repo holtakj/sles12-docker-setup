@@ -8,4 +8,4 @@ $DIR/docker-host.sh &&
 
 ansible-playbook $DIR/../common/ansible/jenkins_server.yaml &&
 
-/usr/local/bin/docker-compose -f $DIR/../common/docker-compose/jenkins/docker-compose.yaml up --user jenkins-docker
+/usr/local/bin/docker-compose -t 30 -f $DIR/../common/docker-compose/jenkins/docker-compose.yaml up
