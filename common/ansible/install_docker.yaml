@@ -5,7 +5,7 @@
       zypper:
         name: docker
         state: present
-    - name: Install docker-compose
+    - name: UnInstall SLES docker-compose because its broken
       zypper:
         name: docker-compose
         state: absent
