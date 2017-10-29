@@ -1,10 +1,10 @@
 ---
 - hosts: localhost
   tasks:
-    - name: Create user jenkins_docker
+    - name: Create user jenkins-docker
       user:
-        name: jenkins_docker
+        name: jenkins-docker
         createhome: no
-        shell: /bin/nologin
+        shell: /bin/false
         system: yes
         state: present
