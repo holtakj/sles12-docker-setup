@@ -7,6 +7,9 @@ services:
       - "80:80"
     volumes:
       - /etc/nginx/conf.d
+    depends_on:
+      - dockergen
+    restart: always
 
   dockergen:
     image: jwilder/docker-gen
@@ -16,6 +19,7 @@ services:
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./nginx.tmpl:/etc/docker-gen/templates/nginx.tmpl
+    restart: always
 
   jenkins:
     image: jenkins/jenkins:lts
@@ -27,5 +31,8 @@ services:
       - "50000:50000"
     volumes:
       - jenkins_home:/var/jenkins_home
+    depends_on:
+      - nginx
+    restart: always
 volumes:
   jenkins_home:
