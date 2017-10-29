@@ -22,5 +22,8 @@
         src: ../../tools/docker-compose
         dest: /usr/local/bin/docker-compose
         backup: no
+        owner: root
+        group: root
+        mode: u=rwx,g=rwx,o=rx
 
 
