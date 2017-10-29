@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Install Latest Jenkins LTS into docker
+      docker_service:
+        project_src: ../docker-compose/jenkins
+        staet: absent
