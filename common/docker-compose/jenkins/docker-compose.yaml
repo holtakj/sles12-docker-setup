@@ -8,7 +8,7 @@ services:
     volumes:
       - /etc/nginx/conf.d
     restart: always
-    user: jenkins-docker
+    user: "600001"
 
   dockergen:
     image: jwilder/docker-gen
@@ -19,7 +19,7 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./nginx.tmpl:/etc/docker-gen/templates/nginx.tmpl
     restart: always
-    user: jenkins-docker
+    user: "600001"
 
   jenkins:
     image: jenkins/jenkins:lts
@@ -34,6 +34,6 @@ services:
     depends_on:
       - nginx
     restart: always
-    user: jenkins-docker
+    user: "600001"
 volumes:
   jenkins_home:
