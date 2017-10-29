@@ -13,5 +13,5 @@
       file:
         path: /home/jenkins-docker/data
         state: directory
+        recurse: yes
         owner: jenkins-docker
-         
