@@ -17,6 +17,10 @@
       service:
         name: docker
         state: started
+    - name: Install Docker CE
+      zypper:
+        name: python-pip
+        state: present
     - name: Install docker-compose
       pip:
         name: docker-compose
