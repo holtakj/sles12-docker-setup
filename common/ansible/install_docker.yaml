@@ -17,17 +17,10 @@
       service:
         name: docker
         state: started
-    - name: Install python-pip
-      zypper:
-        name: python-pip
-        state: present
-    - name: Install docker-compose
-      pip:
-        name: docker-compose
-        state: present
-        version: 1.15.0
-    - name: Install docker-py
-      pip:
-        name: docker-py
-        state: present
+    - name: Install static compiled docker-compose
+      copy:
+        src: ../../tools/docker-compose
+        dst: /usr/local/bin/docker-compose
+        backup: no
+        
 
