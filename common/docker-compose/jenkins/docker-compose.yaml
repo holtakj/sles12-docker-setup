@@ -32,6 +32,6 @@ services:
     depends_on:
       - nginx
     restart: always
-    user: "600001"
+    user: "60001"
 volumes:
   jenkins_home:
