@@ -24,8 +24,6 @@ services:
       - VIRTUAL_PORT=8080
       - JAVA_OPTS=-server -Xms2g -Xmx14g -XX:+UseG1GC -XX:+ExplicitGCInvokesConcurrent -XX:+ParallelRefProcEnabled -XX:+UseStringDeduplication -XX:+UnlockExperimentalVMOptions -XX:G1NewSizePercent=20 -XX:+UnlockDiagnosticVMOptions -XX:G1SummarizeRSetStatsPeriod=1
     ports:
-      - "8080:8080"
-      - "8443:8443"
       - "50000:50000"
     volumes:
       - jenkins_home:/var/jenkins_home
