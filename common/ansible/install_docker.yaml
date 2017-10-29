@@ -30,5 +30,5 @@
       pip:
         name: docker-py
         state: present
-        version: 1.9
+        version: 1.10
 
