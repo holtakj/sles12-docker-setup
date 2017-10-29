@@ -6,3 +6,4 @@
         name: jenkins-docker
         system: no
         state: present
+        uid: 60001
