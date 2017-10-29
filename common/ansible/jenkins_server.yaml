@@ -10,4 +10,8 @@
         state: present
         uid: 60001
     - name: Creates directory to mount jenkins data
-      file: path=/home/jenkins-docker/data state=directory
+      file:
+        path: /home/jenkins-docker/data
+        state: directory
+        owner: jenkins-docker
+         
