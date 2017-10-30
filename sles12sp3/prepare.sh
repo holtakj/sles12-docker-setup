@@ -17,13 +17,11 @@ zypper addrepo http://download.opensuse.org/repositories/devel:languages:python/
 
 
 echo "Please answer with 'a' to trust all repos..." &&
-sleep 3 &&
 
 zypper refresh &&
 
 echo "SUSE zypper tool sucks and thats why its going to present you with a nice conflict." &&
 echo "Do not be scared and take first resolution possible and proceed with the install." &&
-sleep 5 &&
 
 zypper install ansible
 
