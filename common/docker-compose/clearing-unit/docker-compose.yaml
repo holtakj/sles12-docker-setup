@@ -24,8 +24,10 @@ services:
     environment:
       - VIRTUAL_HOST=docker.local
       - VIRTUAL_PORT=8080
-    command: /opt/jboss/wildfly/bin/standalone.sh \
-    -b 0.0.0.0
+    command: "
+      /opt/jboss/wildfly/bin/standalone.sh
+      -b 0.0.0.0
+    "
     depends_on:
       - nginx
     restart: always
