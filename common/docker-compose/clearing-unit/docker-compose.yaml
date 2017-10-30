@@ -27,6 +27,10 @@ services:
     command: "
       /opt/jboss/wildfly/bin/standalone.sh
       -b 0.0.0.0
+      -DDB_CONNECTION_URL=jdbc:oracle:thin:@oracle-1.ucsrewe.lan:1522:orcl1
+      -DDB_DRIVER=oracle
+      -DDB_USERNAME=dev_clearingunit
+      -DDB_PASSWORD=dev_clearingunit
     "
     depends_on:
       - nginx
