@@ -10,4 +10,4 @@
         state: present
         uid: 61001
         shell: /bin/false
-    
+
