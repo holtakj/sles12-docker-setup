@@ -8,7 +8,6 @@ services:
     volumes:
       - /etc/nginx/conf.d
     restart: always
-    privileged: true
 
   dockergen:
     image: jwilder/docker-gen:0.7.3
@@ -19,7 +18,6 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./nginx.tmpl:/etc/docker-gen/templates/nginx.tmpl
     restart: always
-    privileged: true
 
   jenkins:
     image: jenkins/jenkins:lts-alpine
