@@ -4,7 +4,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../common/enforce_root.sh
 
 
-$DIR/docker-host.sh &&
+$DIR/docker-host.sh
 
 ansible-playbook $DIR/../common/ansible/jenkins_server.yaml &&
 
