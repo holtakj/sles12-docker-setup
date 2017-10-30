@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Create user cu-docker with home dir under /home/cu-docker
+      user:
+        name: cu-docker
+        system: yes
+        createhome: yes
+        home: /home/cu-docker
+        state: present
+        uid: 61001
+        shell: /bin/false
+    
