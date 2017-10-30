@@ -1,16 +1,6 @@
 ---
 - hosts: localhost
   tasks:
-    - name: Create user jenkins-nginx docker with elevated priviledes to docker group
-      user:
-        name: jenkins-nginx
-        system: yes
-        createhome: no
-        state: present
-        uid: 60000
-        shell: /bin/false
-        groups: docker
-
     - name: Create user jenkins-docker with home dir under /home/jenkins-docker
       user:
         name: jenkins-docker
