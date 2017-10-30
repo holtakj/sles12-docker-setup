@@ -23,7 +23,7 @@ zypper refresh &&
 echo "SUSE zypper tool sucks and thats why its going to present you with a nice conflict." &&
 echo "Do not be scared and take first resolution possible and proceed with the install." &&
 
-zypper install ansible
+zypper install ansible &&
 
 echo  -n "Installed " &&
 ansible-playbook --version
