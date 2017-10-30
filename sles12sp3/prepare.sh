@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-. ../common/enforce_root.sh
+. $DIR/../common/enforce_root.sh
 
 echo "Preparing environment for SLES12 SP3 Docker machine..." &&
 
