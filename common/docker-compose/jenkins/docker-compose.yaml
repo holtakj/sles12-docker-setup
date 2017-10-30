@@ -19,7 +19,6 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./nginx.tmpl:/etc/docker-gen/templates/nginx.tmpl
     restart: always
-    user: "60000"
 
   jenkins:
     image: jenkins/jenkins:lts
