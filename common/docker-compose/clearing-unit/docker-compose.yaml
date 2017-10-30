@@ -31,6 +31,27 @@ services:
       -DDB_DRIVER=oracle
       -DDB_USERNAME=dev_clearingunit
       -DDB_PASSWORD=dev_clearingunit
+
+      -DDB_EM_CONNECTION_URL=jdbc:oracle:thin:@oracle-1.ucsrewe.lan:1522:orcl1
+      -DDB_EM_DRIVER=oracle
+      -DDB_EM_USERNAME=dev_clearingunit_em
+      -DDB_EM_PASSWORD=dev_clearingunit_em
+
+      -DFAKE_LOGIN_MODULE_ENABLED=true
+      -DAD_LOGIN_MODULE_ENABLED=true
+      -DAD_SEARCH_BASE=OU=DL,OU=Organisation,DC=REWE-AUT,DC=1TLD,DC=BIZ
+      -DAD_DOMAIN_CONTROLLER_HOST_AND_PORT=192.168.185.128:389
+      -DAD_CONNECTION_TIMEOUT_MS=5000
+      -DAD_USERNAME=CN=CU_Serviceuser,OU=User,OU=ClearingUnit,OU=DL,OU=Organisation,DC=REWE-AUT,DC=1TLD,DC=BIZ
+      -DAD_PASSWORD=1234TestCU!
+      -DAD_LAB_ID_REGEXP=CN=.+,OU=Lab_(.+),OU=Labs,OU=ClearingUnit,OU=DL,OU=Organisation,DC=REWE-AUT,DC=1TLD,DC=BIZ
+      -DAD_CU_QM_GROUP=CN=CU_QM,OU=Groups,OU=ClearingUnit,OU=DL,OU=Organisation,DC=REWE-AUT,DC=1TLD,DC=BIZ
+      -DAD_CU_LABOR_GROUP=CN=CU_Labor,OU=Groups,OU=ClearingUnit,OU=DL,OU=Organisation,DC=REWE-AUT,DC=1TLD,DC=BIZ
+      -DAD_CU_SYSTEM_GROUP=CN=CU_System,OU=Groups,OU=ClearingUnit,OU=DL,OU=Organisation,DC=REWE-AUT,DC=1TLD,DC=BIZ
+
+      -DMAIL_SMTP_HOST=192.168.185.129
+      -DMAIL_DEFAULT_TEMPLATE=at/rewe/clearingunit/templates/mail.html
+
     "
     depends_on:
       - nginx
