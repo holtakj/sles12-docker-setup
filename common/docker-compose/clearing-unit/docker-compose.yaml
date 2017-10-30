@@ -20,7 +20,7 @@ services:
     restart: always
 
   clearingunit:
-    image: rewe/clearing-unit
+    image: rewe/clearing-unit:unspecified
     environment:
       - VIRTUAL_HOST=docker.local
       - VIRTUAL_PORT=8080
