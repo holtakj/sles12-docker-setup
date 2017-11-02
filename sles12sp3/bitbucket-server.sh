@@ -3,6 +3,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 . $DIR/../common/enforce_root.sh
 
-ansible-playbook $DIR/../common/ansible/github_server.yaml &&
+ansible-playbook $DIR/../common/ansible/bitbucket_server.yaml &&
 
-/usr/local/bin/docker-compose -f $DIR/../common/docker-compose/github/docker-compose.yaml up
+/usr/local/bin/docker-compose -f $DIR/../common/docker-compose/github/bitbucket-compose.yaml up
