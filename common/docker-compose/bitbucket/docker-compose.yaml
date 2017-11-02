@@ -23,10 +23,9 @@ services:
     image: atlassian/bitbucket-server:5.5
     environment:
       - VIRTUAL_HOST=docker.local
-      - VIRTUAL_PORT=8080
+      - VIRTUAL_PORT=7990
       - JAVA_OPTS=-server -Xms2g -Xmx8g -XX:+UseG1GC -XX:+ExplicitGCInvokesConcurrent -XX:+ParallelRefProcEnabled -XX:+UseStringDeduplication -XX:+UnlockExperimentalVMOptions -XX:G1NewSizePercent=20 -XX:+UnlockDiagnosticVMOptions -XX:G1SummarizeRSetStatsPeriod=1
     ports:
-      - "7990:7990"
       - "7999:7999"
     volumes:
       - /home/bitbucket-docker/DATA:/var/atlassian/application-data/bitbucket
