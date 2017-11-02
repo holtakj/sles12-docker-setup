@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Create user bitbucket-docker with home dir under /home/bitbucket-docker
+      user:
+        name: bitbucket-docker
+        system: yes
+        createhome: yes
+        home: /home/bitbucket-docker
+        state: present
+        uid: 60002
+        shell: /bin/false
+    - name: Creates directory to mount bitbucket data
+      file:
+        path: /home/bitbucket-docker/DATA
+        state: directory
+        recurse: yes
+        owner: bitbucket-docker
