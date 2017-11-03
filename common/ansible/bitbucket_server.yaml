@@ -12,7 +12,7 @@
         shell: /bin/false
     - name: Creates directory to mount bitbucket data
       file:
-        path: /home/bitbucket-docker/DATA
+        path: /home/bitbucket-docker/DATA/bitbucket
         state: directory
         recurse: yes
         owner: bitbucket-docker

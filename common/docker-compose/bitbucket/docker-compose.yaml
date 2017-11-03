@@ -28,7 +28,7 @@ services:
     ports:
       - "7999:7999"
     volumes:
-      - /home/bitbucket-docker/DATA:/var/atlassian/application-data/bitbucket
+      - /home/bitbucket-docker/DATA/bitbucket:/var/atlassian/application-data/bitbucket
     depends_on:
       - nginx
     restart: always

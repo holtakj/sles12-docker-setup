@@ -12,7 +12,7 @@
         shell: /bin/false
     - name: Creates directory to mount jenkins data
       file:
-        path: /home/jenkins-docker/DATA
+        path: /home/jenkins-docker/DATA/jenkins
         state: directory
         recurse: yes
         owner: jenkins-docker

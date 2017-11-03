@@ -1,0 +1,70 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Create user artifactory-docker with home dir under /home/artifactory-docker
+      user:
+        name: artifactory-docker
+        system: yes
+        createhome: yes
+        home: /home/artifactory-docker
+        state: present
+        uid: 60003
+        shell: /bin/false
+    - name: Creates directory to mount artifactory data
+      file:
+        path: /home/artifactory-docker/DATA
+        state: directory
+        recurse: yes
+        owner: artifactory-docker
+    - name: Creates artifactory sub-dir
+      file:
+        path: /home/artifactory-docker/DATA/artifactory
+        state: directory
+        recurse: yes
+        owner: artifactory-docker
+    - name: Creates artifactory etc dir
+      file:
+        path: /home/artifactory-docker/DATA/artifactory/etc
+        state: directory
+        recurse: yes
+        owner: artifactory-docker
+    - name: Creates artifactory nginx dir
+      file:
+        path: /home/artifactory-docker/DATA/nginx
+        state: directory
+        recurse: yes
+        owner: artifactory-docker
+    - name: Creates artifactory nginx/conf.d dir
+      file:
+        path: /home/artifactory-docker/DATA/nginx/conf.d
+        state: directory
+        recurse: yes
+        owner: artifactory-docker
+    - name: Creates artifactory nginx/log dir
+      file:
+        path: /home/artifactory-docker/DATA/nginx/log
+        state: directory
+        recurse: yes
+        owner: artifactory-docker
+    - name: Creates artifactory nginx/ssl dir
+      file:
+        path: /home/artifactory-docker/DATA/nginx/ssl
+        state: directory
+        recurse: yes
+        owner: artifactory-docker
+#    - name: Install communication-key file
+#      copy:
+#        src: ../files/artifactory/security/communication.key
+#        dest: /home/artifactory-docker/DATA/artifactory/etc
+#        owner: artifactory-docker
+#
+#    - name: Install access keys
+#      copy:
+#        src: ../files/artifactory/access
+#        dest: /home/artifactory-docker/DATA/artifactory/etc
+#        owner: artifactory-docker
+    - name: Nginx Proxy Configuration
+      copy:
+        src: ../files/artifactory/nginx/conf.d/
+        dest: /home/artifactory-docker/DATA/artifactory/nginx/conf.d
+        owner: artifactory-docker
