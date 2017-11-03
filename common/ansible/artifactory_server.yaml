@@ -66,5 +66,5 @@
     - name: Nginx Proxy Configuration
       copy:
         src: ../files/artifactory/nginx/conf.d/
-        dest: /home/artifactory-docker/DATA/artifactory/nginx/conf.d
+        dest: /home/artifactory-docker/DATA/nginx/conf.d
         owner: artifactory-docker
