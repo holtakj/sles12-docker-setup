@@ -42,7 +42,7 @@
         state: directory
         owner: artifactory-docker
         group: artifactory
-   - name: Creates artifactory sub-dir
+   - name: Creates artifactory sub-dir /logs
      file:
        path: /home/artifactory-docker/DATA/artifactory/logs
        state: directory
