@@ -16,6 +16,15 @@
         uid: 1030
         group: artifactory
         shell: /bin/false
+    - name: Create user artifactory-docker with home dir under /home/artifactory-docker
+      user:
+        name: artifactory-nginx
+        system: yes
+        createhome: no
+        state: present
+        uid: 104
+        group: artifactory
+        shell: /bin/false        
     - name: Creates directory to mount artifactory data
       file:
         path: /home/artifactory-docker/DATA
@@ -38,25 +47,25 @@
       file:
         path: /home/artifactory-docker/DATA/nginx
         state: directory
-        owner: artifactory-docker
+        owner: artifactory-nginx
         group: artifactory
     - name: Creates artifactory nginx/conf.d dir
       file:
         path: /home/artifactory-docker/DATA/nginx/conf.d
         state: directory
-        owner: artifactory-docker
+        owner: artifactory-nginx
         group: artifactory
     - name: Creates artifactory nginx/log dir
       file:
         path: /home/artifactory-docker/DATA/nginx/log
         state: directory
-        owner: artifactory-docker
+        owner: artifactory-nginx
         group: artifactory
     - name: Creates artifactory nginx/ssl dir
       file:
         path: /home/artifactory-docker/DATA/nginx/ssl
         state: directory
-        owner: artifactory-docker
+        owner: artifactory-nginx
         group: artifactory
 #    - name: Install communication-key file
 #      copy:
@@ -73,7 +82,7 @@
       copy:
         src: ../files/artifactory/nginx/conf.d/
         dest: /home/artifactory-docker/DATA/nginx/conf.d
-        owner: artifactory-docker
+        owner: artifactory-nginx
         group: artifactory
         force: no
     - name: Creates artifactory addon-drivers
