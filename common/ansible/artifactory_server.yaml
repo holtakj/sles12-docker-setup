@@ -14,7 +14,7 @@
       file:
         path: /home/artifactory-docker/DATA
         state: directory
-        recurse: yes
+        recurse: no
         owner: artifactory-docker
     - name: Creates artifactory sub-dir
       file:
