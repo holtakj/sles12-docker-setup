@@ -68,3 +68,14 @@
         src: ../files/artifactory/nginx/conf.d/
         dest: /home/artifactory-docker/DATA/nginx/conf.d
         owner: artifactory-docker
+     - name: Creates artifactory addon-drivers
+       file:
+         path: /home/artifactory-docker/DATA/addon-drivers
+         state: directory
+         recurse: yes
+         owner: artifactory-docker
+     - name: Add Oracle JDBC Driver 12.1.0.1
+       copy:
+        src: ../files/artifactory/ojdbc7-12.1.0.1.jar
+        dest: /home/artifactory-docker/DATA/addon-drivers/ojdbc7.jar
+        owner: artifactory-docker
