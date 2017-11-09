@@ -8,7 +8,7 @@
         createhome: yes
         home: /home/artifactory-docker
         state: present
-        uid: 60003
+        uid: 104
         shell: /bin/false
     - name: Creates directory to mount artifactory data
       file:
