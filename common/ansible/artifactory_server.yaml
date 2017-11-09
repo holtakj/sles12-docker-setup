@@ -67,14 +67,20 @@
         state: directory
         owner: artifactory-docker
         group: artifactory
-
-
     - name: Creates artifactory etc dir
       file:
         path: /home/artifactory-docker/DATA/artifactory/etc
         state: directory
         owner: artifactory-docker
         group: artifactory
+    - name: Creates artifactory etc plugins dir
+      file:
+        path: /home/artifactory-docker/DATA/artifactory/etc/plugins
+        state: directory
+        owner: artifactory-docker
+        group: artifactory
+
+
     - name: Creates artifactory nginx dir
       file:
         path: /home/artifactory-docker/DATA/nginx
