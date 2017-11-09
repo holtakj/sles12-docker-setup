@@ -14,49 +14,42 @@
       file:
         path: /home/artifactory-docker/DATA
         state: directory
-        recurse: yes
         owner: artifactory-docker
         group: 107
     - name: Creates artifactory sub-dir
       file:
         path: /home/artifactory-docker/DATA/artifactory
         state: directory
-        recurse: yes
         owner: artifactory-docker
         group: 107
     - name: Creates artifactory etc dir
       file:
         path: /home/artifactory-docker/DATA/artifactory/etc
         state: directory
-        recurse: yes
         owner: artifactory-docker
         group: 107
     - name: Creates artifactory nginx dir
       file:
         path: /home/artifactory-docker/DATA/nginx
         state: directory
-        recurse: yes
         owner: artifactory-docker
         group: 107
     - name: Creates artifactory nginx/conf.d dir
       file:
         path: /home/artifactory-docker/DATA/nginx/conf.d
         state: directory
-        recurse: yes
         owner: artifactory-docker
         group: 107
     - name: Creates artifactory nginx/log dir
       file:
         path: /home/artifactory-docker/DATA/nginx/log
         state: directory
-        recurse: yes
         owner: artifactory-docker
         group: 107
     - name: Creates artifactory nginx/ssl dir
       file:
         path: /home/artifactory-docker/DATA/nginx/ssl
         state: directory
-        recurse: yes
         owner: artifactory-docker
         group: 107
 #    - name: Install communication-key file
@@ -81,7 +74,6 @@
       file:
         path: /home/artifactory-docker/DATA/addon-drivers
         state: directory
-        recurse: yes
         owner: artifactory-docker
         group: 107
     - name: Add Oracle JDBC Driver 12.1.0.1
