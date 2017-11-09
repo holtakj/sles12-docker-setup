@@ -14,7 +14,6 @@ services:
       nofile:
         soft: 32000
         hard: 40000
-    user: "104"
   nginx:
     image: docker.bintray.io/jfrog/nginx-artifactory-pro:5.5.2
     container_name: nginx
@@ -36,4 +35,3 @@ services:
       nofile:
         soft: 32000
         hard: 40000
-    user: "104"
