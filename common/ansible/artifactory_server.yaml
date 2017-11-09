@@ -8,7 +8,7 @@
         state: present
     - name: Create artifactory group
       group:
-        gid: 104
+        gid: 107
         name: artifactory-nginx
         state: present
     - name: Create user artifactory-docker with home dir under /home/artifactory-docker
