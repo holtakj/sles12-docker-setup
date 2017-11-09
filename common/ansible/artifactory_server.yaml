@@ -68,6 +68,7 @@
         src: ../files/artifactory/nginx/conf.d/
         dest: /home/artifactory-docker/DATA/nginx/conf.d
         owner: artifactory-docker
+        force: no
     - name: Creates artifactory addon-drivers
       file:
         path: /home/artifactory-docker/DATA/addon-drivers
