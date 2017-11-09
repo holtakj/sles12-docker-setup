@@ -19,6 +19,7 @@ services:
       - DB_URL=jdbc:oracle:thin:@oracle-1.ucsrewe.lan:1522:orcl1
       - DB_USER=artifactory
       - DB_PASSWORD=artifactory
+      - JAVA_OPTS=-Duser.timezone=CET
   nginx:
     image: docker.bintray.io/jfrog/nginx-artifactory-pro:5.5.2
     container_name: nginx
