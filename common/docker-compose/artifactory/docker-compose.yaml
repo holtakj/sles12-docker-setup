@@ -15,10 +15,10 @@ services:
         soft: 32000
         hard: 40000
     environment:
-      - DB_TYPE=oracle
-      - DB_URL=jdbc:oracle:thin:@oracle-1.ucsrewe.lan:1522:orcl1
-      - DB_USER=artifactory
-      - DB_PASSWORD=artifactory
+#      - DB_TYPE=oracle
+#      - DB_URL=jdbc:oracle:thin:@oracle-1.ucsrewe.lan:1522:orcl1
+#      - DB_USER=artifactory
+#      - DB_PASSWORD=artifactory
       - JAVA_OPTS= -server -Xms2g -Xmx12g -Xss256k -XX:+UseG1GC -Duser.timezone=CET
   nginx:
     image: docker.bintray.io/jfrog/nginx-artifactory-pro:5.5.2
