@@ -42,12 +42,33 @@
         state: directory
         owner: artifactory-docker
         group: artifactory
+
     - name: Creates artifactory sub-dir /logs
       file:
         path: /home/artifactory-docker/DATA/artifactory/logs
         state: directory
         owner: artifactory-docker
         group: artifactory
+    - name: Creates artifactory sub-dir /data
+      file:
+        path: /home/artifactory-docker/DATA/artifactory/data
+        state: directory
+        owner: artifactory-docker
+        group: artifactory
+    - name: Creates artifactory sub-dir /backup
+      file:
+        path: /home/artifactory-docker/DATA/artifactory/backup
+        state: directory
+        owner: artifactory-docker
+        group: artifactory
+    - name: Creates artifactory sub-dir /access
+      file:
+        path: /home/artifactory-docker/DATA/artifactory/access
+        state: directory
+        owner: artifactory-docker
+        group: artifactory
+
+
     - name: Creates artifactory etc dir
       file:
         path: /home/artifactory-docker/DATA/artifactory/etc
