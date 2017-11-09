@@ -1,6 +1,11 @@
 ---
 - hosts: localhost
   tasks:
+    - name: Create artifactory group
+      group:
+        gid: 1030
+        name: artifactory
+        state: present
     - name: Create user artifactory-docker with home dir under /home/artifactory-docker
       user:
         name: artifactory-docker
@@ -8,50 +13,51 @@
         createhome: yes
         home: /home/artifactory-docker
         state: present
-        uid: 104
+        uid: 1030
+        group: artifactory
         shell: /bin/false
     - name: Creates directory to mount artifactory data
       file:
         path: /home/artifactory-docker/DATA
         state: directory
         owner: artifactory-docker
-        group: 107
+        group: artifactory
     - name: Creates artifactory sub-dir
       file:
         path: /home/artifactory-docker/DATA/artifactory
         state: directory
         owner: artifactory-docker
-        group: 107
+        group: artifactory
     - name: Creates artifactory etc dir
       file:
         path: /home/artifactory-docker/DATA/artifactory/etc
         state: directory
         owner: artifactory-docker
-        group: 107
+        group: artifactory
     - name: Creates artifactory nginx dir
       file:
         path: /home/artifactory-docker/DATA/nginx
         state: directory
         owner: artifactory-docker
-        group: 107
+        group: artifactory
     - name: Creates artifactory nginx/conf.d dir
       file:
         path: /home/artifactory-docker/DATA/nginx/conf.d
         state: directory
         owner: artifactory-docker
-        group: 107
+        group: artifactory
     - name: Creates artifactory nginx/log dir
       file:
         path: /home/artifactory-docker/DATA/nginx/log
         state: directory
         owner: artifactory-docker
-        group: 107
+        group: artifactory
     - name: Creates artifactory nginx/ssl dir
       file:
         path: /home/artifactory-docker/DATA/nginx/ssl
         state: directory
         owner: artifactory-docker
-        group: 107
+        group: artifactory
 #    - name: Install communication-key file
 #      copy:
 #        src: ../files/artifactory/security/communication.key
@@ -68,17 +74,17 @@
         src: ../files/artifactory/nginx/conf.d/
         dest: /home/artifactory-docker/DATA/nginx/conf.d
         owner: artifactory-docker
-        group: 107
+        group: artifactory
         force: no
     - name: Creates artifactory addon-drivers
       file:
         path: /home/artifactory-docker/DATA/addon-drivers
         state: directory
         owner: artifactory-docker
-        group: 107
+        group: artifactory
     - name: Add Oracle JDBC Driver 12.1.0.1
       copy:
        src: ../files/artifactory/ojdbc7-12.1.0.1.jar
        dest: /home/artifactory-docker/DATA/addon-drivers/ojdbc7.jar
        owner: artifactory-docker
-       group: 107
+       group: artifactory
