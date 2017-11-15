@@ -1,0 +1,9 @@
+version: '2'
+services:
+  dind-17-10-0-ce:
+    image: docker:17.10.0-ce-dind
+    container_name: dind-17-10-0-ce
+    ports:
+      - "10001:2375"
+    privileged: true
+    restart: always
