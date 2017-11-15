@@ -7,3 +7,5 @@ services:
       - "17040:2375"
     privileged: true
     restart: always
+    volumes:
+      - /home/dind/DATA/dind-17.04.0:/var/lib/docker

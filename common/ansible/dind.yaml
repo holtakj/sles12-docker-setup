@@ -1,3 +1,21 @@
 ---
 - hosts: localhost
   tasks:
+    - name: Create user for docker-in-docker (DIND)
+      user:
+        name: dind-docker
+        system: yes
+        createhome: yes
+        home: /home/dind
+        state: present
+        shell: /bin/false
+    - name: Creates DATA directory for dind
+        file:
+          path: /home/dind/DATA
+          state: directory
+          owner: dind-docker
+    - name: Creates DATA directory for dind 17.04.0
+            file:
+              path: /home/dind/DATA/dind-17.04.0
+              state: directory
+              owner: dind-docker
